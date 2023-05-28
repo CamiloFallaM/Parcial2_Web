@@ -1,6 +1,8 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from "react-router-dom";
+import {FormattedMessage} from 'react-intl';
+import './style.css';
 
 const { useEffect, useState } = require("react");
 
@@ -18,26 +20,24 @@ function Lista () {
    return(
     
     <div>
-        <h1>El aroma magico</h1>
-            <div className="text-center">
-            <img src="https://png.pngtree.com/thumb_back/fw800/back_our/20190619/ourmid/pngtree-coffee-fresh-brown-poster-banner-background-image_133007.jpg" alt="Cafe"></img>
-            </div>
-    <div className='row'>
+    <div className='row p-5'>
     <div className='col'>
     <table className="table">
-      <thead>
+      <thead className="table-dark">
         <tr>
-          <th scope="col">Nombre</th>
-          <th scope="col">Tipo</th>
-          <th scope="col">Region</th>
+          <th scope="col"><FormattedMessage id="Nombre"/></th>
+          <th scope="col"><FormattedMessage id="Tipo"/></th>
+          <th scope="col"><FormattedMessage id="Region"/></th>
         </tr>
       </thead>
       <tbody>
         {listas.map((e) => (
         <tr>
+        <td>
         <Link to={"/lista/" + e.id}>
-          <td>{e.nombre}</td>
-          </Link>
+          {e.nombre}
+        </Link>
+        </td>
           <td>{e.tipo}</td>
           <td>{e.region}</td>
           
@@ -47,7 +47,7 @@ function Lista () {
       </tbody>
     </table>
     </div>
-    <div className='col'>.</div>
+    <div className='col'></div>
     </div>
   </div>
    )

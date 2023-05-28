@@ -1,0 +1,15 @@
+{
+    "Nombre": "Name",
+    "Tipo": "Type",
+    "Region": "Region",
+    "Notas": "Notes",
+    "Cultivado": "Cultivated at an altitude of",
+    "Msnm": "masl",
+    "Aroma": "The magic scent",
+    "Inicio": "Login",
+    "NombreU": "Username",
+    "Contrasena": "Password",
+    "Ingresar": "Log In",
+    "Cancelar": "Cancel",
+    "Contactanos": "Contact Us"
+}
